@@ -44,8 +44,6 @@ class Protobuf < Formula
     system "./autogen.sh" if build.head?
     system "./configure", "--disable-debug", "--disable-dependency-tracking",
                           "--prefix=#{prefix}", "--with-zlib"
-    system "make"
-    system "make", "check"
     system "make", "install"
 
     # Install editor support and examples
